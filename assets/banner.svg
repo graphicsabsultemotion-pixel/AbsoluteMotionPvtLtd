@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16" />
+      <stop offset="50%" stop-color="#12182c" />
+      <stop offset="100%" stop-color="#0c0e17" />
+    </linearGradient>
+
+    <linearGradient id="brandGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#72c03c" stop-opacity="0" />
+      <stop offset="50%" stop-color="#009be3" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#2b2d8e" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1600" height="600" fill="url(#bgGrad)" />
+
+  <!-- Kinetic Motion Curves -->
+  <g stroke="url(#brandGlow)" fill="none" opacity="0.6">
+    <path d="M-100 450 C 400 120, 900 520, 1700 160" stroke-width="8" />
+    <path d="M-100 470 C 400 140, 900 540, 1700 180" stroke-width="3" stroke="#009be3" opacity="0.5" />
+  </g>
+
+  <!-- Embedded Brand Logo Graphic Center Left -->
+  <g transform="translate(100, 150) scale(0.75)" opacity="0.95">
+    <text x="50" y="240" font-family="'Outfit', sans-serif" font-weight="900" font-size="110" fill="#ffffff" letter-spacing="-2">ABSOLUTE</text>
+    <text x="50" y="360" font-family="'Outfit', sans-serif" font-weight="700" font-size="92" fill="#009be3" letter-spacing="-1">Motion Pvt. Ltd.</text>
+    <text x="910" y="310" font-family="'Inter', sans-serif" font-weight="700" font-size="36" fill="#ffffff">®</text>
+  </g>
+
+  <!-- Large Gear Motif Silhouette Right side -->
+  <g transform="translate(1050, -40) scale(1.4)" opacity="0.85">
+    <!-- Green Section -->
+    <path d="M 120 70 A 150 150 0 0 1 200 40 L 205 10 L 235 25 L 230 55 A 150 150 0 0 1 270 80 L 295 60 L 320 85 L 298 108 A 150 150 0 0 1 315 130 L 270 170 C 230 110, 160 85, 120 70 Z" fill="#72c03c" />
+    <!-- Cyan Section -->
+    <path d="M 270 80 L 295 60 L 320 85 L 298 108 A 150 150 0 0 1 332 160 L 362 155 L 372 190 L 342 198 A 150 150 0 0 1 345 220 L 285 220 C 280 160, 240 110, 180 85 Z" fill="#009be3" />
+    <!-- Deep Blue Section -->
+    <path d="M 342 198 A 150 150 0 0 1 348 240 L 380 248 L 375 285 L 342 282 A 150 150 0 0 1 320 320 L 320 350 L 180 350 C 180 300, 240 280, 285 220 C 295 240, 320 230, 342 198 Z" fill="#2b2d8e" />
+
+    <!-- White Dots -->
+    <g fill="#ffffff">
+      <circle cx="150" cy="95" r="9" />
+      <circle cx="175" cy="82" r="9" />
+      <circle cx="202" cy="74" r="9" />
+      <circle cx="230" cy="70" r="9" />
+      <circle cx="258" cy="72" r="9" />
+      <circle cx="286" cy="80" r="9" />
+      <circle cx="310" cy="95" r="9" />
+      <circle cx="330" cy="116" r="8" />
+      <circle cx="345" cy="140" r="8" />
+      <circle cx="354" cy="166" r="8" />
+      <circle cx="356" cy="195" r="7.5" />
+      <circle cx="354" cy="225" r="7" />
+    </g>
+  </g>
+</svg>

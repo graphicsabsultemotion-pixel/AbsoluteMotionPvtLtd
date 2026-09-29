@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Absolute Motion Pvt. Ltd. | Human-Centered Industrial Automation &amp; Control Panels</title>
+  <meta name="description" content="Where connection transforms into control. Absolute Motion Pvt. Ltd. delivers custom control panel manufacturing, OEM integration, Industry 4.0, and Prayas Academy training labs.">
+  <meta name="theme-color" content="#101420">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://absolutemotion.in">
+  <meta property="og:title" content="Absolute Motion Pvt. Ltd. | Human-Centered Industrial Automation">
+  <meta property="og:description" content="Where connection transforms into control, and control awakens into consciousness. Control Panel Manufacturing, OEM Integration, Industry 4.0 &amp; Prayas Academy.">
+  <meta property="og:image" content="assets/banner.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #101420;
+      --bg-raised: #181d2e;
+      --bg-card: #1d2338;
+      --border: rgba(0, 155, 227, 0.22);
+      --border-hover: rgba(114, 192, 60, 0.55);
+      --text: #f4f7fc;
+      --text-dim: #a4b1c7;
+      --gold: #72c03c;
+      --gold-deep: #5ea52f;
+      --cyan: #009be3;
+      --brand-blue: #2b2d8e;
+      --radius: 18px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      min-height: 100vh;
+      min-height: 100svh;
+      position: relative;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+
+    /* ---- Hero ---- */
+    .hero {
+      position: relative;
+      height: clamp(200px, 42vw, 320px);
+      overflow: hidden;
+      background: #0a0c14;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(16, 20, 32, 0.05) 30%,
+        rgba(16, 20, 32, 0.6) 75%,
+        var(--bg) 100%);
+    }
+
+    /* ---- Profile Header ---- */
+    .profile {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .avatar-wrapper {
+      position: relative;
+      width: 136px;
+      height: 136px;
+      margin: -68px auto 0;
+      z-index: 2;
+    }
+    .avatar {
+      width: 136px;
+      height: 136px;
+      border-radius: 50%;
+      border: 4px solid var(--bg);
+      box-shadow: 0 0 0 3.5px #009be3, 0 8px 32px rgba(0, 0, 0, 0.5);
+      background: #ffffff;
+      object-fit: contain;
+      padding: 4px;
+      transition: transform 0.3s ease;
+    }
+    .avatar-wrapper:hover .avatar {
+      transform: scale(1.04);
+    }
+    .status-badge {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      background: #72c03c;
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(114, 192, 60, 0.7);
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-top: 14px;
+      line-height: 1.25;
+    }
+    h1 .sep { color: var(--cyan); font-weight: 500; padding: 0 4px; }
+    h1 .accent {
+      background: linear-gradient(135deg, var(--gold), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .handle {
+      color: var(--cyan);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .verified-badge {
+      width: 16px;
+      height: 16px;
+      fill: var(--cyan);
+    }
+    .bio {
+      color: var(--text-dim);
+      max-width: 520px;
+      margin: 12px auto 0;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+    .bio strong { color: var(--text); font-weight: 600; }
+
+    /* ---- Social Icons ---- */
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .socials a:hover, .socials a:focus-visible {
+      color: var(--gold);
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      background: var(--bg-card);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+    .socials svg { width: 21px; height: 21px; fill: currentColor; }
+
+    /* ---- Filter Tags ---- */
+    .filter-section {
+      max-width: 640px;
+      margin: 24px auto 0;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .filter-btn {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      color: #ffffff;
+      background: rgba(0, 155, 227, 0.18);
+      border-color: var(--cyan);
+    }
+
+    /* ---- Link Cards ---- */
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 26px 20px calc(24px + env(safe-area-inset-bottom));
+    }
+    .cards { display: grid; gap: 16px; }
+    
+    .card {
+      --pad: 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--pad);
+      transition: all 0.22s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card.has-media { display: block; }
+    .card[hidden] { display: none !important; }
+    
+    .card-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .card-media {
+      position: relative;
+      display: block;
+      width: calc(100% + 2 * var(--pad));
+      margin: calc(-1 * var(--pad)) calc(-1 * var(--pad)) 14px;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      background: #0e111a;
+    }
+    .card-media img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .card:hover .card-media img {
+      transform: scale(1.02);
+    }
+    .card-media.video { cursor: pointer; }
+    .card-media iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      display: block;
+    }
+    
+    .play-badge {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 60px;
+      height: 44px;
+      background: rgba(230, 33, 23, 0.92);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease;
+    }
+    .card:hover .play-badge { transform: scale(1.1); }
+    .play-badge svg { width: 26px; height: 26px; fill: #fff; margin-left: 2px; }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(450px 140px at 0% 0%, rgba(0, 155, 227, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .card:hover, .card:focus-visible {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-icon {
+      flex: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(114, 192, 60, 0.2), rgba(0, 155, 227, 0.1));
+      border: 1px solid rgba(114, 192, 60, 0.3);
+      color: var(--gold);
+    }
+    .card-icon svg { width: 25px; height: 25px; fill: currentColor; }
+    
+    .card-icon.cyan {
+      background: linear-gradient(135deg, rgba(0, 155, 227, 0.2), rgba(43, 45, 142, 0.1));
+      border-color: rgba(0, 155, 227, 0.35);
+      color: var(--cyan);
+    }
+    .card-icon.yt {
+      background: linear-gradient(135deg, rgba(255, 60, 60, 0.18), rgba(255, 60, 60, 0.07));
+      border-color: rgba(255, 90, 90, 0.3);
+      color: #ff5a5a;
+    }
+
+    .card-body { min-width: 0; flex: 1; }
+    .card-title {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1.08rem;
+      letter-spacing: -0.005em;
+    }
+    .card-desc {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      margin-top: 3px;
+      line-height: 1.45;
+    }
+    .card-domain {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--cyan);
+      background: rgba(0, 155, 227, 0.12);
+      border-radius: 999px;
+      padding: 2px 10px;
+    }
+    .card-arrow {
+      flex: none;
+      color: var(--text-dim);
+      opacity: 0.6;
+      transition: all 0.2s ease;
+    }
+    .card:hover .card-arrow { color: var(--gold); opacity: 1; transform: translateX(3px); }
+    .card-arrow svg { width: 18px; height: 18px; }
+
+    footer {
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      padding: 12px 20px 36px;
+      opacity: 0.8;
+    }
+    footer a { color: var(--cyan); font-weight: 500; }
+
+    /* ---- Desktop QR Panel ---- */
+    .qr-panel { display: none; }
+    @media (min-width: 920px) {
+      .qr-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        right: 28px;
+        bottom: 28px;
+        z-index: 10;
+        background: var(--bg-raised);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px 14px 12px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s ease;
+        cursor: pointer;
+      }
+      .qr-panel:hover {
+        transform: translateY(-2px);
+        border-color: var(--border-hover);
+      }
+      .qr-panel img {
+        width: 128px;
+        height: 128px;
+        border-radius: 10px;
+        background: #f4ede2;
+      }
+      .qr-panel span {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--text-dim);
+        max-width: 130px;
+        text-align: center;
+        line-height: 1.35;
+      }
+    }
+
+    /* ---- Modal Styling ---- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 12, 20, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-hover);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 500px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .modal-close:hover { color: var(--gold); border-color: var(--gold); }
+    .modal-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .modal-desc {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--cyan);
+    }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--cyan), var(--brand-blue));
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 155, 227, 0.4);
+    }
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--cyan);
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      z-index: 1000;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 440px) {
+      h1 { font-size: 1.6rem; }
+      .card { --pad: 15px; gap: 13px; }
+      .card-row { gap: 13px; }
+      .card-icon { width: 46px; height: 46px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header Banner -->
+  <header class="hero">
+    <img src="assets/banner.svg" alt="Absolute Motion Pvt. Ltd. Human-Centered Industrial Automation Banner" fetchpriority="high">
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <div class="avatar-wrapper">
+      <img class="avatar" src="assets/logo.png" alt="Absolute Motion Pvt. Ltd. Official Logo" width="136" height="136">
+      <div class="status-badge" title="Systems Active &amp; Ready"></div>
+    </div>
+
+    <h1>Absolute Motion <span class="sep">|</span> <span class="accent">Pvt. Ltd.</span></h1>
+    <div class="handle">
+      @absolutemotionpvtltd
+      <svg class="verified-badge" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    </div>
+    
+    <p class="bio">Where connection transforms into control, and control awakens into consciousness ⚡ <strong>Control Panel Manufacturing</strong>, OEM Integration &amp; Industry 4.0</p>
+
+    <!-- Social Nav Bar: Instagram, Facebook, LinkedIn -->
+    <nav class="socials" aria-label="Social profiles">
+      <a href="https://www.instagram.com/absolutemotionpvtltd/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/people/Absolute-Motion-Pvt-Ltd/61593086855704/#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://in.linkedin.com/company/absolutemotion" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg>
+      </a>
+    </nav>
+  </section>
+
+  <!-- Filter Navigation Tags -->
+  <div class="filter-section">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All Capabilities</button>
+    <button class="filter-btn" onclick="filterCards('control-panel', this)">Control Panels</button>
+    <button class="filter-btn" onclick="filterCards('oem', this)">OEM Integration</button>
+    <button class="filter-btn" onclick="filterCards('industry-4', this)">Industry 4.0</button>
+    <button class="filter-btn" onclick="filterCards('prayas', this)">Prayas Academy</button>
+  </div>
+
+  <!-- Main Content Showcase Cards -->
+  <main>
+    <div class="cards" id="cards-container">
+
+      <!-- Card 1: Featured Video (Plays Direct Inline) -->
+      <div class="card has-media" data-category="control-panel" onclick="playInlineVideo(this)">
+        <span class="card-media video" data-video="8LESD0vInaA" role="button" aria-label="Play video: Absolute Motion Control Panel &amp; Automation Showcase">
+          <img src="assets/yt-preview.svg" alt="Watch Absolute Motion Precision Control Demo" loading="lazy">
+          <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        </span>
+        <span class="card-row">
+          <span class="card-icon yt">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </span>
+          <span class="card-body">
+            <span class="card-title">Watch Our Automation Engineering Showcase</span>
+            <span class="card-desc">See how our industrial control panels, PLC systems, and automated machinery power purpose with radical reliability.</span>
+            <span class="card-domain">Click to Play Directly</span>
+          </span>
+          <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+        </span>
+      </div>
+
+      <!-- Card 2: Control Panel Manufacturing -->
+      <a class="card has-media" data-category="control-panel" href="https://absolutemotion.in/control-panel-manufacturing" target="_blank" rel="noopener">
+        <div class="card-media">
+          <img src="assets/control-panel-engineers.jpg" alt="Indian Electrical Engineers Assembling and Testing Industrial Control Panel" loading="lazy">
+        </div>
+        <div class="card-row">
+          <span class="card-icon cyan">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          </span>
+          <div class="card-body">
+            <span class="card-title">Control Panel Manufacturing</span>
+            <span class="card-desc">Custom industrial control panels engineered for dust, heat, and high-demand environments. Connecting reliability with respect.</span>
+            <span class="card-domain">absolutemotion.in/control-panel-manufacturing</span>
+          </div>
+          <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Card 3: OEM Integration -->
+      <a class="card" data-category="oem" href="https://absolutemotion.in/oem" target="_blank" rel="noopener">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        </span>
+        <div class="card-body">
+          <span class="card-title">OEM Machine Integration</span>
+          <span class="card-desc">Seamless PLC, HMI, and motion drive synchronization bringing human-centered clarity to engineers and confidence to operators.</span>
+          <span class="card-domain">absolutemotion.in/oem</span>
+        </div>
+        <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+
+      <!-- Card 4: Industry 4.0 -->
+      <a class="card" data-category="industry-4" href="https://absolutemotion.in/industry-40" target="_blank" rel="noopener">
+        <span class="card-icon cyan">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </span>
+        <div class="card-body">
+          <span class="card-title">Industry 4.0 &amp; Smart Telemetry</span>
+          <span class="card-desc">Transforming industrial data into wisdom. Smart factory analytics, remote telemetry, and predictive maintenance solutions.</span>
+          <span class="card-domain">absolutemotion.in/industry-40</span>
+        </div>
+        <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+
+      <!-- Card 5: Prayas Academy -->
+      <a class="card" data-category="prayas" href="https://absolutemotion.in/academy-prayas-training-labs" target="_blank" rel="noopener">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        </span>
+        <div class="card-body">
+          <span class="card-title">Prayas Academy &amp; Training Labs</span>
+          <span class="card-desc">Nurturing visionary industrial engineers and automation leaders through hands-on practical training and skill development.</span>
+          <span class="card-domain">absolutemotion.in/academy-prayas-training-labs</span>
+        </div>
+        <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+
+      <!-- Card 6: Our Story / About Us -->
+      <a class="card" data-category="control-panel" href="https://absolutemotion.in/about-us" target="_blank" rel="noopener">
+        <span class="card-icon cyan">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </span>
+        <div class="card-body">
+          <span class="card-title">The Absolute Story &amp; Human-First Philosophy</span>
+          <span class="card-desc">Learn how our journey from a modest workshop grew into India's catalyst for intelligent, empathic industrial automation.</span>
+          <span class="card-domain">absolutemotion.in/about-us</span>
+        </div>
+        <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+
+      <!-- Card 7: Industry Case Studies -->
+      <a class="card" data-category="control-panel" href="projects.html">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6z"/></svg>
+        </span>
+        <div class="card-body">
+          <span class="card-title">Industrial Case Studies &amp; Industries</span>
+          <span class="card-desc">Deployments across Process Industry, Water &amp; Wastewater, HVAC, Food &amp; Beverage, Pharmaceuticals, and Packaging.</span>
+          <span class="card-domain">absolutemotion.in/case-studies</span>
+        </div>
+        <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+
+      <!-- Card 8: Schedule Consultation / Contact Us -->
+      <div class="card" data-category="control-panel" onclick="openModal('Consultation')">
+        <span class="card-icon cyan">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </span>
+        <div class="card-body">
+          <span class="card-title">Contact &amp; Engineering Consultation</span>
+          <span class="card-desc">Connect directly with our automation engineers for custom panel design, OEM integration, and smart factory inquiries.</span>
+          <span class="card-domain">absolutemotion.in/contact-us</span>
+        </div>
+        <span class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Desktop QR Code Panel -->
+  <aside class="qr-panel" aria-label="QR Code link" onclick="copyLink()">
+    <img src="assets/qr.svg" alt="QR code for Absolute Motion Pvt. Ltd." width="128" height="128" loading="lazy">
+    <span>Scan or click to share site</span>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Absolute Motion Pvt. Ltd. · <a href="https://absolutemotion.in" target="_blank" rel="noopener">absolutemotion.in</a>
+  </footer>
+
+  <!-- Interactive Inquiry Modal -->
+  <div class="modal-overlay" id="inquiryModal" onclick="closeModalOnOverlay(event)">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+      <h3 class="modal-title" id="modalHeaderTitle">Get in Touch</h3>
+      <p class="modal-desc">Send your inquiry directly to our engineering team at Absolute Motion Pvt. Ltd.</p>
+      
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name / Company</label>
+          <input type="text" id="name" required placeholder="e.g. Industrial Partner / OEM">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="name@company.com">
+        </div>
+        <div class="form-group">
+          <label for="interest">Capability of Interest</label>
+          <select id="interest">
+            <option value="panel">Control Panel Manufacturing</option>
+            <option value="oem">OEM Machine Integration</option>
+            <option value="industry4">Industry 4.0 &amp; Telemetry</option>
+            <option value="prayas">Prayas Academy Training</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Automation Requirements</label>
+          <textarea id="message" rows="3" required placeholder="Describe your control panel or automation specifications..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit Inquiry 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Link copied to clipboard!</div>
+
+  <!-- JS Logic -->
+  <script>
+    // Inline Direct YouTube Video Player Embed
+    function playInlineVideo(card) {
+      var media = card.querySelector('.card-media.video');
+      if (!media || media.querySelector('iframe')) return;
+      var videoId = media.dataset.video || '8LESD0vInaA';
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&playsinline=1&rel=0';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+      frame.allowFullscreen = true;
+      frame.title = media.getAttribute('aria-label') || 'Video player';
+      media.replaceChildren(frame);
+    }
+
+    // Category Filtering
+    function filterCards(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#cards-container .card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.removeAttribute('hidden');
+        } else {
+          card.setAttribute('hidden', 'true');
+        }
+      });
+    }
+
+    // Modal Handlers
+    function openModal(topic) {
+      const modal = document.getElementById('inquiryModal');
+      const title = document.getElementById('modalHeaderTitle');
+      if (topic) {
+        title.innerText = topic + ' - Inquiry';
+      } else {
+        title.innerText = 'Schedule Engineering Consultation';
+      }
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('inquiryModal').classList.remove('active');
+    }
+
+    function closeModalOnOverlay(e) {
+      if (e.target.classList.contains('modal-overlay')) {
+        closeModal();
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Thank you! Your inquiry has been sent to Absolute Motion.');
+      document.getElementById('contactForm').reset();
+    }
+
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Site link copied to clipboard! 📋');
+      }).catch(() => {
+        showToast('Absolute Motion Pvt. Ltd.');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

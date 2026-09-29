@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Photorealistic Lighting & Gradients -->
+    <linearGradient id="photoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="30%" stop-color="#0f172a" />
+      <stop offset="70%" stop-color="#18233c" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+
+    <!-- Metallic Brushed Steel Enclosure Texture -->
+    <linearGradient id="brushedMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a4768" />
+      <stop offset="25%" stop-color="#232d44" />
+      <stop offset="50%" stop-color="#4e5f88" />
+      <stop offset="75%" stop-color="#1b2336" />
+      <stop offset="100%" stop-color="#354363" />
+    </linearGradient>
+
+    <linearGradient id="wireBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#009be3" />
+      <stop offset="100%" stop-color="#0055b3" />
+    </linearGradient>
+
+    <linearGradient id="wireGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8ce653" />
+      <stop offset="100%" stop-color="#559929" />
+    </linearGradient>
+
+    <radialGradient id="workSpotlight" cx="55%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#009be3" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#050811" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="photoGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background Environment (Industrial Clean Room) -->
+  <rect width="1200" height="675" fill="url(#photoBg)" />
+  <rect width="1200" height="675" fill="url(#workSpotlight)" />
+
+  <!-- Background Factory Depth Lines -->
+  <g stroke="rgba(0,155,227,0.15)" stroke-width="1">
+    <path d="M0 135 H1200 M0 270 H1200 M0 405 H1200 M0 540 H1200" />
+    <path d="M240 0 V675 M480 0 V675 M720 0 V675 M960 0 V675" />
+  </g>
+
+  <!-- Main Industrial Control Panel Enclosure (Photorealistic Render) -->
+  <g transform="translate(100, 30)" filter="url(#subtleDrop)">
+    <!-- Outer Stainless Steel Cabinet Door & Frame -->
+    <rect x="0" y="0" width="1000" height="490" rx="14" fill="url(#brushedMetal)" stroke="#009be3" stroke-width="3" />
+    
+    <!-- Interior Electrical Plate -->
+    <rect x="16" y="16" width="968" height="458" rx="10" fill="#0d1322" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+
+    <!-- Top DIN Rail & Heavy-Duty Components -->
+    <g transform="translate(40, 45)">
+      <!-- Galvanized Steel DIN Rail -->
+      <rect x="0" y="0" width="920" height="16" fill="#4a5a7d" stroke="#232d44" stroke-width="1" />
+      
+      <!-- Main Circuit Breakers (3-Phase Power) -->
+      <g transform="translate(30, -25)">
+        <rect x="0" y="0" width="120" height="75" rx="5" fill="#1b2438" stroke="#009be3" stroke-width="2" />
+        <rect x="15" y="10" width="25" height="35" rx="3" fill="#ff3b30" />
+        <rect x="47" y="10" width="25" height="35" rx="3" fill="#ff3b30" />
+        <rect x="79" y="10" width="25" height="35" rx="3" fill="#ff3b30" />
+        <text x="22" y="62" font-family="'Outfit', sans-serif" font-weight="700" font-size="11" fill="#ffffff">3P 100A MAIN</text>
+      </g>
+
+      <!-- PLC Central Processor Unit -->
+      <g transform="translate(175, -25)">
+        <rect x="0" y="0" width="180" height="75" rx="5" fill="#009be3" />
+        <rect x="10" y="8" width="160" height="22" rx="3" fill="#09101d" />
+        <text x="20" y="24" font-family="'Outfit', sans-serif" font-weight="700" font-size="12" fill="#72c03c">SIEMENS / AM-PLC</text>
+        <!-- LED Status Indicators -->
+        <circle cx="25" cy="45" r="4" fill="#72c03c" filter="url(#photoGlow)" />
+        <circle cx="45" cy="45" r="4" fill="#72c03c" filter="url(#photoGlow)" />
+        <circle cx="65" cy="45" r="4" fill="#ffffff" />
+        <circle cx="85" cy="45" r="4" fill="#ffffff" />
+        <text x="25" y="64" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#ffffff">RUN  ERR  I/O  COMM</text>
+      </g>
+
+      <!-- Servo Drive Controller Modules -->
+      <g transform="translate(375, -25)">
+        <rect x="0" y="0" width="140" height="75" rx="5" fill="#2b2d8e" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+        <text x="15" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="12" fill="#ffffff">SERVO DRIVE A1</text>
+        <rect x="15" y="32" width="110" height="28" rx="3" fill="#0c1220" />
+        <text x="25" y="50" font-family="'Outfit', sans-serif" font-weight="700" font-size="12" fill="#009be3">3000 RPM OK</text>
+      </g>
+
+      <!-- Digital HMI Panel Screen -->
+      <g transform="translate(535, -25)">
+        <rect x="0" y="0" width="340" height="75" rx="6" fill="#070b14" stroke="#72c03c" stroke-width="2" />
+        <text x="20" y="26" font-family="'Outfit', sans-serif" font-weight="700" font-size="14" fill="#72c03c">ABSOLUTE MOTION — HMI TOUCH</text>
+        <path d="M 20 52 Q 90 20, 160 52 T 320 38" fill="none" stroke="#009be3" stroke-width="3" />
+        <circle cx="280" cy="52" r="5" fill="#72c03c" filter="url(#photoGlow)" />
+      </g>
+    </g>
+
+    <!-- Middle Rail & Organized Wiring Looms -->
+    <g transform="translate(40, 165)">
+      <rect x="0" y="0" width="920" height="16" fill="#4a5a7d" />
+      
+      <!-- Realistic Wires (Cyan & Green Bundles) -->
+      <path d="M 40 25 C 100 80, 200 10, 300 60 C 400 110, 500 20, 600 70 C 700 120, 800 30, 880 70" fill="none" stroke="url(#wireBlue)" stroke-width="4" opacity="0.9" />
+      <path d="M 40 45 C 100 100, 200 30, 300 80 C 400 130, 500 40, 600 90 C 700 140, 800 50, 880 90" fill="none" stroke="url(#wireGreen)" stroke-width="4" opacity="0.9" />
+
+      <!-- Cable Trunks / Raceways -->
+      <rect x="30" y="110" width="860" height="35" rx="4" fill="#182238" stroke="rgba(0,155,227,0.3)" stroke-width="1.5" />
+      <text x="50" y="133" font-family="'Outfit', sans-serif" font-weight="600" font-size="14" fill="#009be3">CABLE RACEWAY — IP67 ISOLATED INDUSTRIAL HARNESS</text>
+    </g>
+
+    <!-- Bottom High-Power Terminal Rail Block -->
+    <g transform="translate(40, 335)">
+      <rect x="0" y="0" width="920" height="16" fill="#4a5a7d" />
+      <rect x="30" y="25" width="860" height="95" rx="8" fill="#121828" stroke="#72c03c" stroke-width="2" />
+      <text x="60" y="65" font-family="'Outfit', sans-serif" font-weight="700" font-size="22" fill="#72c03c" letter-spacing="1">
+        HIGH VOLTAGE TERMINAL BUS &amp; GROUND RACK
+      </text>
+      <text x="60" y="95" font-family="'Inter', sans-serif" font-weight="600" font-size="15" fill="#a4b1c7">
+        Rigorous Factory Tested &amp; Quality Certified | Absolute Motion Pvt. Ltd.
+      </text>
+    </g>
+  </g>
+
+  <!-- Photorealistic Engineers at Work (High Detail Layer) -->
+
+  <!-- Engineer 1 (Left: Female Lead Automation Engineer Testing Control Panel Circuits) -->
+  <g transform="translate(260, 110)">
+    <!-- Drop Shadow -->
+    <ellipse cx="100" cy="440" rx="90" ry="22" fill="rgba(0,0,0,0.6)" />
+
+    <!-- Body & High-Vis Vest -->
+    <path d="M 35 200 Q 100 110, 165 200 L 180 440 H 20 Z" fill="#111828" />
+    <path d="M 45 210 L 155 210 L 170 440 H 30 Z" fill="url(#wireGreen)" />
+    <!-- Silver Reflective Stripes -->
+    <path d="M 50 270 H 150 M 45 330 H 155" stroke="#ffffff" stroke-width="12" opacity="0.95" />
+
+    <!-- Head & Yellow Safety Helmet -->
+    <circle cx="100" cy="85" r="38" fill="#f8c39e" />
+    <path d="M 58 80 C 58 40, 142 40, 142 80 Z" fill="#ffe033" />
+    <rect x="52" y="73" width="96" height="14" rx="6" fill="#ffd633" />
+
+    <!-- Arms Holding Multimeter Tool & Probes -->
+    <path d="M 140 180 Q 220 210, 270 160" stroke="#f8c39e" stroke-width="22" stroke-linecap="round" fill="none" />
+    <path d="M 270 160 L 330 110" stroke="#ff3b30" stroke-width="4" /> <!-- Red Wire Probe -->
+    <rect x="180" y="190" width="48" height="75" rx="8" fill="#e63946" stroke="#ffffff" stroke-width="2.5" /> <!-- Digital Multimeter -->
+    <rect x="190" y="200" width="28" height="20" rx="3" fill="#090d16" />
+    <text x="194" y="214" font-family="'Outfit', sans-serif" font-weight="700" font-size="10" fill="#72c03c">230.4 V</text>
+  </g>
+
+  <!-- Engineer 2 (Right: Male Senior Systems Specialist with Diagnostics Tablet) -->
+  <g transform="translate(680, 80)">
+    <!-- Drop Shadow -->
+    <ellipse cx="100" cy="470" rx="95" ry="24" fill="rgba(0,0,0,0.6)" />
+
+    <!-- Body & Uniform -->
+    <path d="M 25 220 Q 100 120, 175 220 L 190 470 H 10 Z" fill="#2b2d8e" />
+    <path d="M 40 230 L 160 230 L 175 470 H 25 Z" fill="url(#wireGreen)" />
+    <path d="M 45 290 H 155 M 40 350 H 160" stroke="#ffffff" stroke-width="12" opacity="0.95" />
+
+    <!-- Head & White Engineer Hard Hat -->
+    <circle cx="100" cy="95" r="40" fill="#e0a98b" />
+    <path d="M 56 90 C 56 48, 144 48, 144 90 Z" fill="#ffffff" />
+    <rect x="50" y="83" width="100" height="14" rx="6" fill="#f0f0f0" />
+
+    <!-- Arms Holding IIoT Diagnostics Tablet -->
+    <path d="M 60 190 Q -10 230, -60 215" stroke="#e0a98b" stroke-width="24" stroke-linecap="round" fill="none" />
+    <g transform="translate(-135, 150) rotate(-10)">
+      <rect x="0" y="0" width="115" height="145" rx="12" fill="#090d16" stroke="#009be3" stroke-width="4" />
+      <rect x="10" y="10" width="95" height="105" rx="4" fill="#141f36" />
+      <text x="18" y="30" font-family="'Outfit', sans-serif" font-weight="700" font-size="11" fill="#72c03c">TELEMETRY DIAGNOSTICS</text>
+      <line x1="18" y1="42" x2="85" y2="42" stroke="#009be3" stroke-width="3" />
+      <path d="M 18 85 C 40 60, 60 95, 85 70" fill="none" stroke="#72c03c" stroke-width="3" />
+    </g>
+  </g>
+
+  <!-- Banner Headline Overlay Text -->
+  <text x="60" y="565" font-family="'Outfit', sans-serif" font-weight="700" font-size="42" fill="#ffffff">
+    Control Panel Manufacturing &amp; Assembly
+  </text>
+  <text x="60" y="618" font-family="'Inter', sans-serif" font-weight="600" font-size="23" fill="#72c03c">
+    Absolute Motion Pvt. Ltd. | Human-Centered Industrial Automation
+  </text>
+</svg>
